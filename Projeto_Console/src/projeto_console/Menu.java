@@ -25,7 +25,7 @@ public class Menu {
 			// menu com opções
 			System.out.println("|---------------------------------------------|");
 			System.out.println("|                                             |");
-			System.out.println("|                  MagicGaming                |");
+			System.out.println("|               MagicGaming Store             |");
 			System.out.println("|                                             |");
 			System.out.println("|---------------------------------------------|");
 			System.out.println("|                                             |");
