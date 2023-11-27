@@ -8,8 +8,8 @@ public class Menu {
 	static Scanner leia = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		int opcao, id, tipo;
-		String nome;
+		int opcao, id, tipo, comum;
+		String nome, incomum, rara,lendária;
 		double preco;
 			
 			do {
@@ -36,6 +36,7 @@ public class Menu {
 			
 			case 1 -> {
 				System.out.println("Criar produto: ");
+				
 				System.out.println("Digite o nome do produto: ");
 				leia.skip("\\R");
 				nome = leia.nextLine();
@@ -44,12 +45,39 @@ public class Menu {
 				System.out.println("Digite o tipo do produto: ");
 				System.out.println("1- Comum ");
 				System.out.println("2- Incomum ");
-				System.out.println("2- Rara ");
-				System.out.println("2- Lendária ");
+				System.out.println("3- Rara ");
+				System.out.println("4- Lendária ");
+				
 				tipo = leia.nextInt();
-
+				
 				System.out.println("Digite o preço da carta: ");
 				preco = leia.nextDouble();
+				
+				switch (tipo) {
+				
+					case 1-> {
+						leia.skip("\\R");
+						System.out.println("Digite o ano da edição: ");
+						comum = leia.nextInt();
+						
+					}
+					case 2 -> {
+						leia.skip("\\R");
+						System.out.println("Digite o Autor da arte da carta: ");
+						incomum = leia.nextLine();
+					}
+					case 3 -> {
+						leia.skip("\\R");
+						System.out.println("Digite o tipo de Foil que esta carta carrega: ");
+						rara = leia.nextLine();
+					}
+					case 4 -> {
+						leia.skip("\\R");
+						System.out.println("Digite o personagem da carta lendária: ");
+						incomum = leia.nextLine();
+					}
+				}
+				
 			}
 			case 2 ->{
 				System.out.println(" Lista dos produtos cadastrados: ");
