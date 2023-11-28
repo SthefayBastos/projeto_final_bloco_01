@@ -102,9 +102,10 @@ public class Menu {
 				System.out.println("Digite o ID do produto: ");
 
 				id = leia.nextInt();
-
+				if (produto.buscarNaList(id).isPresent()) {
 				produto.consultarProdutoId(id);
-
+				} else
+					System.out.println("Produto não encontrado!");
 				keyPress();
 			}
 			case 4 -> {
@@ -163,9 +164,11 @@ public class Menu {
 
 						keyPress();
 					}
-					}
-					}
+					
+					} 
 
+			}else 
+				System.out.println("Produto não encontrado!");
 			}
 			case 5 -> {
 				System.out.println("Excluir produto: ");

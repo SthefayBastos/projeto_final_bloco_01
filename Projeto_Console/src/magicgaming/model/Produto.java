@@ -58,6 +58,6 @@ package magicgaming.model;
 		 System.out.println("Tipo : " + tipo);
 		 System.out.println("Preço: " + this.preco);
 		 
-
+	
 	 }
 }
